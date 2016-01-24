@@ -38,6 +38,7 @@
         android:layout_marginBottom="36dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@android:color/white" />
+        android:background="@android:color/white"
+        android:textColor="#51b46d" />
 
 </RelativeLayout>

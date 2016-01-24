@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 public class FunFactsActivity extends AppCompatActivity {
     private FactBook mFactBook = new FactBook();
+    private ColorWheel mColorWheel = new ColorWheel();
     // Declare our view variables
     private TextView mFactTextView;
     private Button mShowFactButton;
@@ -29,10 +30,12 @@ public class FunFactsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String fact = mFactBook.getFact();
+                int color = mColorWheel.getColor();
 
                 // Update the screen with our dynamic fact
                 mFactTextView.setText(fact);
-                mRelativeLayout.setBackgroundColor(Color.RED);
+                mRelativeLayout.setBackgroundColor(color);
+                mShowFactButton.setTextColor(color);
             }
         };
         mShowFactButton.setOnClickListener(listener);
